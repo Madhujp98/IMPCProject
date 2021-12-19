@@ -17,7 +17,7 @@ import org.springframework.data.jpa.repository.Query;
 public interface MouseGeneRepository extends JpaRepository<MouseGene,Long>{
  
 	//fetch result by ignoring case and pattern matching
-	@Query(value = "select * from public.mouse_gene where lower(symbol) like lower(concat('%', :key,'%')) or mgi_gene_acc_id like lower(concat('%', :key,'%'))", nativeQuery = true)
+	@Query(value = "select * from public.mouse_gene where (lower(symbol) like lower(concat('%', :key,'%'))) or (lower(mgi_gene_acc_id) like lower(concat('%', :key,'%')))", nativeQuery = true)
 	List<MouseGene> findBySymbolOrMgiGeneAccIdIgnoreCase(String key);
 	
 }
