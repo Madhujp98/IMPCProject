@@ -24,20 +24,20 @@ PostgreSQL
 
 This project provides 2 Application Programming Interfaces to interact with the IMPC reference database. 
 
-##### 1. Main api : http://localhost:yourPort/api/impc/mouse-gene/search?key=searchkey
+#### 1. Main api : http://localhost:yourPort/api/impc/mouse-gene/search?key=searchkey
 
-> ###### About: 
->
+##### 	About: 
+
 > - This api is used to fetch list of Mouse Gene **Symbols and Synonyms** along with its associated list of **Human Gene's Support Count** `*[search key is optional]*`.
 > - If searched without a key, the api will list all the Mouse Gene Symbols and Synonyms along with its associated list of Human Gene's Support Count
 >
-> ###### List of search scenarios included in the api:
+> ##### List of search scenarios included in the api:
 >
 > - Search by complete/partial mouse gene ‘symbol’ (e.g. Fgf8 or FG) [***case insensitive***]
 > - Search by complete/partial mouse gene 'synonym' (e.g. Aigf or Aig) [***case insensitive***]
 > - Search by complete/partial mgi_gene_acc_id (e.g. MGI:99604 or mgi:996) [***case insensitive***]
 >
-> ###### Sample Output for search key 'Fgf8' :
+> ##### Sample Output for search key 'Fgf8' :
 >
 > ```` json
 > {
@@ -63,13 +63,13 @@ This project provides 2 Application Programming Interfaces to interact with the 
 > }
 > ````
 
-##### 2. Additional api : http://localhost:yourPort/api/impc/human-gene/supportCount?key=searchkey
+#### 2. Additional api : http://localhost:yourPort/api/impc/human-gene/supportCount?key=searchkey
 
-> ###### About: 
->
+#### 	About: 
+
 > - This Additional api is to separately fetch list of Human Genes Support Count associated with a specified mouse gene searchable via **mouse gene symbol or mgi_gene_account_id** `*[search key is madantory]*`
 >
-> ###### List of search scenarios included in the api:
+> ##### List of search scenarios included in the api:
 >
 > - Search by complete/partial mouse gene ‘symbol’ (e.g. Fgf8 or FG) [***case insensitive***]
 >
